@@ -9,4 +9,8 @@ RFB ("remote framebuffer") is an open simple protocol for remote access to graph
 
 
 
+
+
+
+
 ## VNC protocol recreation
