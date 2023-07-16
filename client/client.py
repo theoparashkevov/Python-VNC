@@ -3,13 +3,15 @@ import time
 import threading
 
 
-HOST = "127.0.0.1"  
-PORT = 65432        
+HOST = "127.0.0.1"
+PORT = 65432
 SLEEP_TIMER = 2
+
 
 class VNCClient():
 
     def __init__(self, client_id):
+        """TO-DO DOCSTRING."""
         self.socket = None
         self.__id   = client_id
 
@@ -19,9 +21,11 @@ class VNCClient():
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     def connect(self, host, port):
+        """Docstring."""
         self.socket.connect((host, port))
 
     def send_data(self, data):
+        """TO-DO docstring."""
         self.socket.send(data)
 
     def send_demo_data(self):
