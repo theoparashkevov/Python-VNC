@@ -5,11 +5,11 @@ import threading
 
 HOST = "127.0.0.1"
 PORT = 65432
-SLEEP_TIMER = 2
+SLEEP_TIMER = 2    
 
-
+    
 class VNCClient():
-
+    
     def __init__(self, client_id):
         """TO-DO DOCSTRING."""
         self.socket = None
@@ -18,6 +18,7 @@ class VNCClient():
         self.__initialize_socket()
 
     def __initialize_socket(self):
+        """TO-DO ."""
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     def connect(self, host, port):
@@ -29,7 +30,7 @@ class VNCClient():
         self.socket.send(data)
 
     def send_demo_data(self):
-        
+        """TO-DO ."""
         for i in range(0, 10):
             print(f'[Client_{self.__id}]', end=' ')
             data_to_be_sent_str = f'[Client_{self.__id}] Some data [{i}]'
